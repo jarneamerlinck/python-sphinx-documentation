@@ -2,19 +2,15 @@ name: Python Package using Conda
 
 on: [push]
 
-env:
-  PYTHON_VERSION: '3.9.2'
-
-
 jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python $PYTHON_VERSION
-      uses: actions/setup-python@v3
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
       with:
-        python-version: $PYTHON_VERSION
+        python-version: '3.9'
 
     - name: Add conda to system path
       run: |
@@ -27,13 +23,14 @@ jobs:
 
     - name: build documentation
       run: |
-        conda activate base
         cd docs;make html;cd ..
 
     # Additional steps to generate documentation in "Documentation" directory
-    - name: Upload Documentation to Wiki
-      uses: SwiftDocOrg/github-wiki-publish-action@v1
-      with:
-        path: "docs/build/html"
-      env:
-        GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+    # - name: Push documentation to wiki
+    #   uses: Andrew-Chen-Wang/github-wiki-action@v3
+    #   env:
+    #     # Make sure you have that / at the end. We use rsync 
+    #     WIKI_DIR: docs/build/html/
+    #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     GH_MAIL: ${{ secrets.YOUR_EMAIL }}
+    #     GH_NAME: ${{ github.repository_owner }}
