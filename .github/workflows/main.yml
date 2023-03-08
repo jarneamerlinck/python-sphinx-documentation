@@ -1,0 +1,39 @@
+name: Python Package using Conda
+
+on: [push]
+
+env:
+  PYTHON_VERSION: '3.9.2'
+
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python $PYTHON_VERSION
+      uses: actions/setup-python@v3
+      with:
+        python-version: $PYTHON_VERSION
+
+    - name: Add conda to system path
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        echo $CONDA/bin >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: |
+        conda env update --file environment.yml --name base
+
+    - name: build documentation
+      run: |
+        conda activate base
+        cd docs;make html;cd ..
+
+    # Additional steps to generate documentation in "Documentation" directory
+    - name: Upload Documentation to Wiki
+      uses: SwiftDocOrg/github-wiki-publish-action@v1
+      with:
+        path: "docs/build/html"
+      env:
+        GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
