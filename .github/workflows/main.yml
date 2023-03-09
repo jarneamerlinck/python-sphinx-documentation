@@ -1,6 +1,20 @@
 name: Python Package using Conda
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'packagename/**'
+    - '*.py'
+    - '*.yml'
+    - 'docs/source/**'
+  pull_request:
+    paths: 
+    - 'packagename/**'
+    - '*.py'
+    - '*.yml'
+    - 'docs/source/**'
+    
+
 
 jobs:
   build-linux:
