@@ -21,7 +21,7 @@ jobs:
       run: |
         conda env update --file environment.yml --name base
 
-    - name: build documentation
+    - name: Build documentation
       run: |
         cd docs;make html;make markdown;cd ..
 
