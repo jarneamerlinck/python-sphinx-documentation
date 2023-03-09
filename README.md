@@ -18,7 +18,7 @@ Template to document code with sphinx
 
 ```conda env create -f environment.yml```
 
-3.   Make documentation
+3. Make documentation
 
 - ```cd docs```
 - ```make html```
