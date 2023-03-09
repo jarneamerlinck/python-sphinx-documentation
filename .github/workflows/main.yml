@@ -25,12 +25,11 @@ jobs:
       run: |
         cd docs;make html;cd ..
 
-    # Additional steps to generate documentation in "Documentation" directory
-    # - name: Push documentation to wiki
-    #   uses: Andrew-Chen-Wang/github-wiki-action@v3
-    #   env:
-    #     # Make sure you have that / at the end. We use rsync 
-    #     WIKI_DIR: docs/build/html/
-    #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     GH_MAIL: ${{ secrets.YOUR_EMAIL }}
-    #     GH_NAME: ${{ github.repository_owner }}
+    - name: Commit and push documentation 
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A docs/build/
+        timestamp=$(date -u)
+        git commit -m "Created documentation from github actions: ${timestamp}" || exit 0
+        git push
