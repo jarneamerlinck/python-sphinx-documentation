@@ -7,13 +7,14 @@ on:
     - '*.py'
     - '*.yml'
     - 'docs/source/**'
+    - '.github/**'
+
   pull_request:
     paths: 
     - 'packagename/**'
     - '*.py'
     - '*.yml'
     - 'docs/source/**'
-    
 
 
 jobs:
