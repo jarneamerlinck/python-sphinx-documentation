@@ -13,7 +13,7 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'packagename'
-DESCRIPTION = 'Example project for sphinx python'
+DESCRIPTION = 'Example project for sphinx python.'
 URL = 'https://github.com/jarneamerlinck/python-sphinx-documentation'
 EMAIL = 'jarneamerlinck@gmail.com'
 AUTHOR = 'Jarne Amerlinck'
