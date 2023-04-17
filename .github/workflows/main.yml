@@ -55,6 +55,10 @@ jobs:
       run: |
         cd docs;make html markdown;cd ..
 
+    - name: Upload to pypi
+      run: |-
+        python3 setup.py upload
+
     - name: Commit and push documentation 
       run: |-
         git config user.name "Automated"
@@ -63,9 +67,6 @@ jobs:
         timestamp=$(date -u)
         git commit -m "Created documentation from github actions: ${timestamp}" || exit 0
         git push
-    - name: Upload to pypi
-      run: |-
-        python3 setup.py upload
 
   update-pages:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
