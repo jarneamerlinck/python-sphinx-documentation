@@ -1,13 +1,13 @@
-Packagename package
+packagename_jarne package
 ===================
 
 Submodules
 ----------
 
-packagename.info module
------------------------
+info
+----
 
-.. automodule:: packagename.info
+.. automodule:: packagename_jarne.submodule.info
     :members:
     :undoc-members:
     :show-inheritance:

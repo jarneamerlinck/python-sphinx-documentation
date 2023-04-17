@@ -1,3 +1,3 @@
 from . import functions
-from . import info
+from .submodule import info
 from . import PID
