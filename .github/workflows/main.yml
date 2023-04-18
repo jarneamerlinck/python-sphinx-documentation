@@ -69,52 +69,50 @@ jobs:
       - name: Run tests
         shell: bash -l {0}
         run: pytest ./tests
+  
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      TWINE_USERNAME: __token__
+      TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+    steps:
+    - uses: actions/checkout@v3
 
-  #   runs-on: ubuntu-latest
-  #   env:
-  #     TWINE_USERNAME: __token__
-  #     TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #     with:
-  #       fetch-depth: 0
-  #       ref: ${{ github.event.pull_request.head.ref }}
-  #   - name: Set up Python 3.9
-  #     uses: actions/setup-python@v4
-  #     with:
-  #       python-version: '3.9'
+    - name: Setup Mambaforge
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: my-env
+          use-mamba: true
+    - name: Set cache date
+      run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
-  #   - name: Add conda to system path
-  #     run: |
-  #       # $CONDA is an environment variable pointing to the root of the miniconda directory
-  #       echo $CONDA/bin >> $GITHUB_PATH
+    - uses: actions/cache@v3
+      with:
+        path: /usr/share/miniconda3/envs/my-env
+        key: linux-64-conda-${{ hashFiles('environment.yml') }}-${{ env.DATE }}-${{ env.CACHE_NUMBER }}
+      id: cache
 
-  #   - name: Install dependencies
-  #     run: |
-  #       conda env update --file environment_build.yml --name base
+    - name: Build documentation
+      run: |
+        cd docs;make html markdown;cd ..
 
-  #   - name: Build documentation html
-  #     run: |
-  #       cd docs;make html;cd ..
-    
-  #   - name: Build documentation
-  #     run: |
-  #       cd docs;make html markdown;cd ..
+    # - name: Upload to pypi
+    #   if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    #   run: |-
+    #     python3 setup.py upload
 
-  #   - name: Upload to pypi
-  #     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-  #     run: |-
-  #       python3 setup.py upload
-
-  #   - name: Commit and push documentation 
-  #     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-  #     run: |-
-  #       git config user.name "Automated"
-  #       git config user.email "actions@users.noreply.github.com"
-  #       git add -A -f docs/build/**
-  #       timestamp=$(date -u)
-  #       git commit -m "Created documentation from github actions: ${timestamp}" || exit 0
-  #       git push
+    # - name: Commit and push documentation 
+    #   if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    #   run: |-
+    #     git config user.name "Automated"
+    #     git config user.email "actions@users.noreply.github.com"
+    #     git add -A -f docs/build/**
+    #     timestamp=$(date -u)
+    #     git commit -m "Created documentation from github actions: ${timestamp}" || exit 0
+    #     git push
 
   # update-pages:
   #   if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
