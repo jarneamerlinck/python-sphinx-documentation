@@ -100,11 +100,11 @@ jobs:
       run: |
         cd docs;make html markdown;cd ..
 
-    # - name: Upload to pypi
-    #   shell: bash -l {0}
-    #   if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    #   run: |-
-    #     python3 setup.py upload
+    - name: Upload to pypi
+      shell: bash -l {0}
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      run: |-
+        python3 setup.py upload
 
     - name: Commit and push documentation 
       shell: bash -l {0}
