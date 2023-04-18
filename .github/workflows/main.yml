@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - 2-speed-up-github-actions
     paths:
     - 'packagename_jarne/**'
     - '*.py'
