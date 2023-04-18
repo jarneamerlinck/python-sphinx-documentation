@@ -96,8 +96,8 @@ jobs:
       id: cache
 
     - name: Build documentation
+      shell: bash -l {0}
       run: |
-        shell: bash -l {0}
         cd docs;make html markdown;cd ..
 
     # - name: Upload to pypi
