@@ -29,7 +29,8 @@ REQUIRED = [
 
 # What packages are optional?
 EXTRAS = {
-	'docs': [ 'Sphinx==6.1.3', 'sphinx-markdown-builder==0.5.5','sphinx-press-theme', 'twine']
+	'docs': [ 'Sphinx==6.1.3', 'sphinx-markdown-builder==0.5.5','sphinx-press-theme', 'twine',
+          'pytest']
 }
 
 # The rest you shouldn't have to touch too much :)

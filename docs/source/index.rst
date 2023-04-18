@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to packagename_jarne's documentation!
-========================================
+=============================================
 
 .. toctree::
    :maxdepth: 2
