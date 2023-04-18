@@ -67,6 +67,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Build documentation html
+        shell: bash -l {0}
         run: |
           cd docs;make html;cd ..
 
