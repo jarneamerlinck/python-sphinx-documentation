@@ -1,5 +1,5 @@
 packagename_jarne package
-===================
+=========================
 
 Submodules
 ----------
