@@ -1,14 +1,23 @@
 packagename_jarne package
 =========================
 
-Submodules
-----------
+This package is a template for other python packages with sphinx.
 
-info
-----
+functions
+---------
 
-.. automodule:: packagename_jarne.submodule.info
+.. automodule:: packagename_jarne.functions
     :members:
     :undoc-members:
     :show-inheritance:
+	:inherited-members:
 
+
+PID
+---
+
+.. automodule:: packagename_jarne.PID
+    :members:
+    :undoc-members:
+    :show-inheritance:
+	:inherited-members:

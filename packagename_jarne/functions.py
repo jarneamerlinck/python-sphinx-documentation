@@ -1,4 +1,16 @@
-#!/usr/bin/env python
+"""Module with functions for the packagename-jarne package.
+ 
+Use this module like this:
+	
+.. code-block:: python
+
+	# Imports
+ 	import packagename_jarne.functions import *
+	
+	# Force torch use for cuda
+	set_max_limit(7, 3)  # Returns 3
+"""
+
 import threading
 import os
 
@@ -61,7 +73,3 @@ def device_exists(path:str) -> bool:
 	except OSError:
 		return False
 	return True
-
-
-
-
