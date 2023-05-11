@@ -16,7 +16,7 @@ Use this module like this:
 		def run(self):
 			print(self.text)
 	ext_obj = ExtendedClass("text")
-	ext_obj.run()
+	ext_obj.run(3)
 
 """
 
