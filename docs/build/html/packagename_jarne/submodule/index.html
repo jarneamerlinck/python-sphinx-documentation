@@ -173,7 +173,7 @@
         <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
                 <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="n">ext_obj</span> <span class="o">=</span> <span class="n">ExtendedClass</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
-<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="py class">
@@ -206,6 +206,12 @@
 <p>Meta class for Base.</p>
 <p>changes input for run.</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.MetaBase.__new__">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.MetaBase.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the class has a method in TO_CHANGE, wrap it</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="packagename_jarne.submodule.base.MetaBase.wrap">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.MetaBase.wrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a wrapped instance method</p>
@@ -216,11 +222,11 @@
 </section>
 <section id="extended">
 <h2>extended<a class="headerlink" href="#extended" title="Permalink to this heading">¶</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-bd047cac838670c1ab0a97f3a9963e2876749741.png" alt="Inheritance diagram of packagename_jarne.submodule.extended" usemap="#inheritanceab353eda2c" class="inheritance graphviz" /></div>
+<div class="graphviz"><img src="../../_images/inheritance-77e0ab90f95e952c39f3a0ecbda0d0b83e39fd5e.png" alt="Inheritance diagram of packagename_jarne.submodule.extended" usemap="#inheritanceab353eda2c" class="inheritance graphviz" /></div>
 <map id="inheritanceab353eda2c" name="inheritanceab353eda2c">
-<area shape="rect" id="node1" href="#packagename_jarne.submodule.base.Base" target="_top" title="Example base class." alt="" coords="5,31,305,56"/>
-<area shape="rect" id="node2" href="#packagename_jarne.submodule.extended.Extended2Class" target="_top" title="packagename_jarne.submodule.extended.Extended2Class" alt="" coords="353,5,756,31"/>
-<area shape="rect" id="node3" href="#packagename_jarne.submodule.extended.ExtendedClass" target="_top" title="packagename_jarne.submodule.extended.ExtendedClass" alt="" coords="357,55,752,80"/>
+<area shape="rect" id="node1" href="#packagename_jarne.submodule.base.Base" target="_top" title="Example base class." alt="" coords="3,42,313,104"/>
+<area shape="rect" id="node2" href="#packagename_jarne.submodule.extended.Extended2Class" target="_top" title="packagename_jarne.submodule.extended.Extended2Class" alt="" coords="344,3,765,65"/>
+<area shape="rect" id="node3" href="#packagename_jarne.submodule.extended.ExtendedClass" target="_top" title="packagename_jarne.submodule.extended.ExtendedClass" alt="" coords="349,80,760,142"/>
 </map><span class="target" id="module-packagename_jarne.submodule.extended"></span><p>Module with the parent classes for the example. Needs to be implemented to use.</p>
 <p>Use this module like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
@@ -235,7 +241,7 @@
         <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
                 <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="n">ext_obj</span> <span class="o">=</span> <span class="n">ExtendedClass</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
-<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="py class">
