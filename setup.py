@@ -29,8 +29,8 @@ REQUIRED = [
 
 # What packages are optional?
 EXTRAS = {
-	'docs': [ 'Sphinx==6.1.3', 'sphinx-markdown-builder==0.5.5','sphinx-press-theme', 'twine',
-          'pytest']
+	'docs': ['Sphinx>=6.1.3', 'sphinx-markdown-builder>=0.5.5', 'sphinx_autodoc_typehints>=1.22', 
+			 'sphinx-press-theme>=0.8.0', 'sphinx_favicon', 'twine', 'graphviz']
 }
 
 # The rest you shouldn't have to touch too much :)
@@ -122,8 +122,9 @@ setup(
 		# Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
 		'License :: OSI Approved :: MIT License',
 		'Programming Language :: Python',
-		'Programming Language :: Python :: 3',
-		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.9',
+		'Programming Language :: Python :: 3.10',
+		'Programming Language :: Python :: 3.11',
 		'Programming Language :: Python :: Implementation :: CPython',
 		'Programming Language :: Python :: Implementation :: PyPy'
 	],

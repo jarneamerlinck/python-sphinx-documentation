@@ -10,22 +10,22 @@ contain the root `toctree` directive. -->
 * [packagename_jarne package](packagename_jarne/index.md)
 
 
-    * [Submodules](packagename_jarne/index.md#submodules)
+    * [functions](packagename_jarne/index.md#module-packagename_jarne.functions)
 
 
-    * [info](packagename_jarne/index.md#module-packagename_jarne.submodule.info)
+    * [PID](packagename_jarne/index.md#module-packagename_jarne.PID)
 
 
-* [Functions](packagename_jarne/functions.md)
+* [submodule](packagename_jarne/submodule/index.md)
 
 
-    * [packagename_jarne.functions module](packagename_jarne/functions.md#packagename-jarne-functions-module)
+    * [info](packagename_jarne/submodule/index.md#module-packagename_jarne.submodule.info)
 
 
-* [PID](PID.md)
+    * [base](packagename_jarne/submodule/index.md#module-packagename_jarne.submodule.base)
 
 
-    * [packagename_jarne.PID module](PID.md#module-packagename_jarne.PID)
+    * [extended](packagename_jarne/submodule/index.md#extended)
 
 
 # Indices and tables

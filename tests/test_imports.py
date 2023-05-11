@@ -1,10 +1,15 @@
-import pytest
+import unittest
 
-def test_base_import():
-    import packagename_jarne
-def test_submodule_import():
-    import packagename_jarne.submodule
-def test_PID_import():
-    import packagename_jarne.PID
-def test_package_version():
-    import packagename_jarne.PID
+class TestImport(unittest.TestCase):
+	def test_base_import(self):
+		"""Test base import.
+		"""    
+		import packagename_jarne
+	def test_datasets_import(self):
+		"""Test submodule import.
+		"""  
+		import packagename_jarne.submodule
+	def test_functions_import(self):
+		"""Test functions import.
+		"""  
+		import packagename_jarne.functions

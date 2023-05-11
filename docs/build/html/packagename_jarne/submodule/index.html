@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+      <title>submodule</title>
+    
+          <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../../_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../../_static/theme-vendors.js"></script> -->
+      <script src="../../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../../genindex.html" />
+  <link rel="search" title="Search" href="../../search.html" />
+  <link rel="prev" title="packagename_jarne package" href="../index.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../../index.html" class="home-link">
+    
+      <span class="site-name">packagename_jarne</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../../index.html#welcome-to-packagename-jarne-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../index.html" class="reference internal ">packagename_jarne package</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">submodule</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#module-packagename_jarne.submodule.info" class="reference internal">info</a></li>
+                
+                  <li class="toctree-l2"><a href="#module-packagename_jarne.submodule.base" class="reference internal">base</a></li>
+                
+                  <li class="toctree-l2"><a href="#extended" class="reference internal">extended</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+    <li>submodule</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="../index.html"
+       title="previous chapter">← packagename_jarne package</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="submodule">
+<h1>submodule<a class="headerlink" href="#submodule" title="Permalink to this heading">¶</a></h1>
+<section id="module-packagename_jarne.submodule.info">
+<span id="info"></span><h2>info<a class="headerlink" href="#module-packagename_jarne.submodule.info" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.info.get_cpu_use">
+<span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.info.</span></span><span class="sig-name descname"><span class="pre">get_cpu_use</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.info.get_cpu_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return CPU usage using psutil</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.info.get_gpu_tempfunc">
+<span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.info.</span></span><span class="sig-name descname"><span class="pre">get_gpu_tempfunc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.info.get_gpu_tempfunc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return GPU temperature as a character string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.info.get_ram_info">
+<span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.info.</span></span><span class="sig-name descname"><span class="pre">get_ram_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.info.get_ram_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return RAM usage using psutil</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.info.get_swap_info">
+<span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.info.</span></span><span class="sig-name descname"><span class="pre">get_swap_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.info.get_swap_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return swap memory  usage using psutil</p>
+</dd></dl>
+
+</section>
+<section id="module-packagename_jarne.submodule.base">
+<span id="base"></span><h2>base<a class="headerlink" href="#module-packagename_jarne.submodule.base" title="Permalink to this heading">¶</a></h2>
+<p>Module with the parent classes for the example. Needs to be implemented to use.</p>
+<p>Use this module like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">packagename_jarne.submodule.base</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create extended class for Base</span>
+<span class="k">class</span> <span class="nc">ExtendedClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+
+        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">ext_obj</span> <span class="o">=</span> <span class="n">ExtendedClass</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.Base">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.base.</span></span><span class="sig-name descname"><span class="pre">Base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.Base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Example base class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.Base.convert_string">
+<span class="sig-name descname"><span class="pre">convert_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.Base.convert_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts string by number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number</strong> (<em>int</em>) – number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.Base.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.Base.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.MetaBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.base.</span></span><span class="sig-name descname"><span class="pre">MetaBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.MetaBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
+<p>Meta class for Base.</p>
+<p>changes input for run.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.MetaBase.__new__">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.MetaBase.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the class has a method in TO_CHANGE, wrap it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.base.MetaBase.wrap">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.base.MetaBase.wrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a wrapped instance method</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="extended">
+<h2>extended<a class="headerlink" href="#extended" title="Permalink to this heading">¶</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-77e0ab90f95e952c39f3a0ecbda0d0b83e39fd5e.png" alt="Inheritance diagram of packagename_jarne.submodule.extended" usemap="#inheritanceab353eda2c" class="inheritance graphviz" /></div>
+<map id="inheritanceab353eda2c" name="inheritanceab353eda2c">
+<area shape="rect" id="node1" href="#packagename_jarne.submodule.base.Base" target="_top" title="Example base class." alt="" coords="3,42,313,104"/>
+<area shape="rect" id="node2" href="#packagename_jarne.submodule.extended.Extended2Class" target="_top" title="packagename_jarne.submodule.extended.Extended2Class" alt="" coords="344,3,765,65"/>
+<area shape="rect" id="node3" href="#packagename_jarne.submodule.extended.ExtendedClass" target="_top" title="packagename_jarne.submodule.extended.ExtendedClass" alt="" coords="349,80,760,142"/>
+</map><span class="target" id="module-packagename_jarne.submodule.extended"></span><p>Module with the parent classes for the example. Needs to be implemented to use.</p>
+<p>Use this module like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">packagename_jarne.submodule.base</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create extended class for Base</span>
+<span class="k">class</span> <span class="nc">ExtendedClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+
+        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">ext_obj</span> <span class="o">=</span> <span class="n">ExtendedClass</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="n">ext_obj</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.extended.Extended2Class">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.extended.</span></span><span class="sig-name descname"><span class="pre">Extended2Class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.extended.Extended2Class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#packagename_jarne.submodule.base.Base" title="packagename_jarne.submodule.base.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.extended.Extended2Class.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.extended.Extended2Class.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.extended.ExtendedClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">packagename_jarne.submodule.extended.</span></span><span class="sig-name descname"><span class="pre">ExtendedClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.extended.ExtendedClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#packagename_jarne.submodule.base.Base" title="packagename_jarne.submodule.base.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.extended.ExtendedClass.convert_string">
+<span class="sig-name descname"><span class="pre">convert_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.extended.ExtendedClass.convert_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts string by number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number</strong> (<em>int</em>) – number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="packagename_jarne.submodule.extended.ExtendedClass.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#packagename_jarne.submodule.extended.ExtendedClass.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="../index.html"
+       title="previous chapter">← packagename_jarne package</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2023 Jarne Amerlinck.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
