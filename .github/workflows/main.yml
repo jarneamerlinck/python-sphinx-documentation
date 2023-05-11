@@ -4,23 +4,28 @@ on:
   push:
     branches:
     - main
+    - dev
     paths:
-    - 'packagename_jarne/**'
-    - '*.py'
-    - '*.yml'
-    - 'docs/source/**'
-    - '.github/**'
+    - '**.py'
+    - '**.yml'
+    - '**.rst'
+    - '!**.md'
+    - '!docs/build/**'
 
   pull_request:
     branches:
     - main
+    - dev
     paths: 
-    - 'packagename_jarne/**'
-    - '*.py'
-    - '*.yml'
-    - 'docs/source/**'
+    - '**.py'
+    - '**.yml'
+    - '**.rst'
+    - '!**.md'
+    - '!docs/build/**'
 
-
+env:
+  CACHE_NUMBER: 0  # increase to reset cache manually
+  
 jobs:
 
   build:
@@ -53,12 +58,12 @@ jobs:
             use-mamba: true
 
       - name: Set cache date
-        run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+        run: echo "DATE=$(date +'%Y%m')" >> $GITHUB_ENV
 
       - uses: actions/cache@v3
         with:
           path: ${{ matrix.prefix }}
-          key: ${{ matrix.label }}-conda-${{ hashFiles('environment.yml') }}-${{ env.DATE }}-${{ env.CACHE_NUMBER }}
+          key: ${{ matrix.label }}-conda-${{ hashFiles('environment_build.yml') }}-${{ env.DATE }}-${{ env.CACHE_NUMBER }}
         id: cache
 
       - name: Update environment
@@ -67,7 +72,7 @@ jobs:
 
       - name: Run tests
         shell: bash -l {0}
-        run: pytest ./tests
+        run: cd tests;python3 -m unittest -b && cd ..
   
   publish-pypi:
     needs: build
@@ -86,13 +91,16 @@ jobs:
           activate-environment: my-env
           use-mamba: true
     - name: Set cache date
-      run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+      run: echo "DATE=$(date +'%Y%m')" >> $GITHUB_ENV
 
     - uses: actions/cache@v3
       with:
         path: /usr/share/miniconda3/envs/my-env
-        key: linux-64-conda-${{ hashFiles('environment.yml') }}-${{ env.DATE }}-${{ env.CACHE_NUMBER }}
+        key: linux-64-conda-${{ hashFiles('environment_build.yml') }}-${{ env.DATE }}-${{ env.CACHE_NUMBER }}
       id: cache
+
+    - name: Install graphviz
+      run: sudo apt-get install graphviz
 
     - name: Build documentation
       shell: bash -l {0}
@@ -107,7 +115,7 @@ jobs:
 
     - name: Commit and push documentation 
       shell: bash -l {0}
-      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' )&& github.event_name != 'pull_request'
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"

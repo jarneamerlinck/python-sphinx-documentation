@@ -11,12 +11,7 @@ Welcome to packagename_jarne's documentation!
    :caption: Contents:
 
    packagename_jarne/index.rst
-   packagename_jarne/functions.rst
-   PID.rst
-
-
-
-
+   packagename_jarne/submodule/index.rst
 
 Indices and tables
 ==================
