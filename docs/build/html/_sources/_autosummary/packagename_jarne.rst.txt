@@ -1,0 +1,31 @@
+﻿packagename\_jarne
+==================
+
+.. automodule:: packagename_jarne
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   packagename_jarne.PID
+   packagename_jarne.functions
+

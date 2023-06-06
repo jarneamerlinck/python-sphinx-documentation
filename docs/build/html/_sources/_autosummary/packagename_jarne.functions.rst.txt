@@ -1,0 +1,42 @@
+packagename\_jarne.functions
+============================
+
+.. automodule:: packagename_jarne.functions
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      device_exists
+      set_max_limit
+      set_min_limit
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      ThreadSafeSingleton
+   
+   
+
+   
+   
+   
+
+
+

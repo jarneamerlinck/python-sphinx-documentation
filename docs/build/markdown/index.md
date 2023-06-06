@@ -7,27 +7,17 @@ contain the root `toctree` directive. -->
 # Contents:
 
 
-* [packagename_jarne package](packagename_jarne/index.md)
+* [packagename_jarne](_autosummary/packagename_jarne.md)
 
 
-    * [functions](packagename_jarne/index.md#module-packagename_jarne.functions)
+    * [packagename_jarne.PID](_autosummary/packagename_jarne.PID.md)
 
 
-    * [PID](packagename_jarne/index.md#module-packagename_jarne.PID)
+    * [packagename_jarne.functions](_autosummary/packagename_jarne.functions.md)
 
 
-* [submodule](packagename_jarne/submodule/index.md)
-
-
-    * [info](packagename_jarne/submodule/index.md#module-packagename_jarne.submodule.info)
-
-
-    * [base](packagename_jarne/submodule/index.md#module-packagename_jarne.submodule.base)
-
-
-    * [extended](packagename_jarne/submodule/index.md#extended)
-
-
+<!-- packagename_jarne/index.rst -->
+<!-- packagename_jarne/submodule/index.rst -->
 # Indices and tables
 
 

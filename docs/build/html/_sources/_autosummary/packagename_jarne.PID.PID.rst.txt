@@ -1,0 +1,30 @@
+packagename\_jarne.PID.PID
+==========================
+
+.. currentmodule:: packagename_jarne.PID
+
+.. autoclass:: PID
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~PID.GenOut
+      ~PID.Initialize
+      ~PID.SetKd
+      ~PID.SetKi
+      ~PID.SetKp
+      ~PID.SetPrevError
+   
+   
+
+   
+   
+   
