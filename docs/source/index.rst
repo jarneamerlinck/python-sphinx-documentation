@@ -10,8 +10,9 @@ Welcome to packagename_jarne's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   packagename_jarne/index.rst
-   packagename_jarne/submodule/index.rst
+   api.rst
+..    packagename_jarne/index.rst
+..    packagename_jarne/submodule/index.rst
 
 Indices and tables
 ==================
