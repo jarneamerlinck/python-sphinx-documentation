@@ -17,17 +17,6 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-# import sys
-# sys.path.insert(0, os.path.abspath('..'))
-# -- General configuration ------------------------------------------------
-
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
-
-# import sys
-
-
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -124,7 +113,6 @@ html_show_sphinx = False
 napoleon_include_special_with_doc = True
 napoleon_include_private_with_doc = True
 
-# inheritance_graph_attrs = dict(rankdir="TB", size='""')
 inheritance_graph_attrs = dict(rankdir="LR", fontsize=16)
 inheritance_node_attrs = dict(fontsize=16, height=1,
                               color='dodgerblue1')
