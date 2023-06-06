@@ -1,0 +1,32 @@
+packagename\_jarne.PID
+======================
+
+.. automodule:: packagename_jarne.PID
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      PID
+   
+   
+
+   
+   
+   
+
+
+

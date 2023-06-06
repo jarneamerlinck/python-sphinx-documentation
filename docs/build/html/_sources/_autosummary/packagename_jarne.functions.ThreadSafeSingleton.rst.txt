@@ -1,0 +1,25 @@
+packagename\_jarne.functions.ThreadSafeSingleton
+================================================
+
+.. currentmodule:: packagename_jarne.functions
+
+.. autoclass:: ThreadSafeSingleton
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ThreadSafeSingleton.mro
+   
+   
+
+   
+   
+   

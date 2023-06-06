@@ -1,0 +1,6 @@
+packagename\_jarne.functions.set\_min\_limit
+============================================
+
+.. currentmodule:: packagename_jarne.functions
+
+.. autofunction:: set_min_limit

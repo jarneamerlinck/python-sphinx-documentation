@@ -1,0 +1,6 @@
+packagename\_jarne.functions.set\_max\_limit
+============================================
+
+.. currentmodule:: packagename_jarne.functions
+
+.. autofunction:: set_max_limit

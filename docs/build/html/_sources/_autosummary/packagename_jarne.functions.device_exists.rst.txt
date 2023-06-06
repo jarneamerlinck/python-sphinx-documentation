@@ -1,0 +1,6 @@
+packagename\_jarne.functions.device\_exists
+===========================================
+
+.. currentmodule:: packagename_jarne.functions
+
+.. autofunction:: device_exists
